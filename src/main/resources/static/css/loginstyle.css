@@ -1,0 +1,29 @@
+::placeholder{
+    font-family: 'Roboto Condensed';
+    font-size: 15px;
+    font-weight: 300;
+    }
+    .container{
+    font-family: 'Roboto Condensed';
+    font-size: 17px;
+    display: block;
+    width: 15%;
+    margin: 10% auto;
+    }
+    label{
+        display: block;
+    }
+    button{
+        border-radius: 5px;
+        font-size: 15px;
+        transition-duration: 0.3s;
+        cursor: pointer;
+        font-family: 'Kalnia';
+        background-color: #023047;
+        color:white;
+        margin-top: 1rem;
+        margin-right: 5px;
+    }
+    button:hover{
+        box-shadow: 0 12px 14px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
