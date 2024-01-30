@@ -6,6 +6,6 @@ BurgerBtn.onclick = function () {
     BurgerMenu.classList.toggle('open');
     const isOpen = BurgerMenu.classList.contains('open');
     BurgerBtnIcon.classList = isOpen
-    ? 'fa-solid fa-xmark'
-    : 'fa-solid fa-bars'
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
 }

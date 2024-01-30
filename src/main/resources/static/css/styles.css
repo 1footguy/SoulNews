@@ -1,176 +1,198 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Shantell+Sans:ital,wght@1,300&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-}
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+  }
 
-body{
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
-    font-family: 'Poppins', sans-serif;
-    background-color: #023047;
-}
+  body {
+      height: 100vh;
+      width: 100%;
+      background-size: cover;
+      font-family: 'Poppins', sans-serif;
+      background-color: #023047;
+  }
 
-h1{
-    text-align: center;
-    color: orangered;
-}
+  h1 {
+      text-align: center;
+      color: orangered;
+  }
 
-a{  
-    font-size: 1.2rem;
-    color: #023047;
-    text-decoration: none;
-    font-family: 'Kalnia';
-    font-weight: 500;
-}
-li{
-    list-style: none;
-}
-a:hover{
-    color: orangered;
-}
+  a {
+      font-size: 1.2rem;
+      color: #023047;
+      text-decoration: none;
+      font-family: 'Kalnia';
+      font-weight: 500;
+  }
 
-header{
-    position: relative;
-    padding: 0 1.5rem;
-    background-color: #D6F0E0;
-}
-.navbar{
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 50px;
-}
-.navbar .logo a{
-    color: orangered;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-.navbar .links{
-    display: flex;
-    gap: 0 1.5rem;
-    justify-content: end;
-}
-.navbar .burger_btn{
-    color: black;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
-}
-#casa{
-    height: 1.2rem;
-    width: auto;
-    padding: 0 2px;
-    vertical-align: text-top;
-}
-#estrela{
-    height: 1.2rem;
-    width: auto;
-    padding: 0 1px;
-    vertical-align: text-top;
-}
-#salvar{
-    height: 1.2rem;
-    width: auto;
-    padding: 0 1px;
-    vertical-align: text-top;
-}
-#register{
-    background-color: orangered;
-    padding: 0.4rem 0.8rem;
-    border-radius: 20px;
-    color: whitesmoke;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: scale 0.2 ease;
-}
-#register:hover{
-    scale: 1.05;
-    color: #023047;
-}
-#register:active{
-    scale: 0.95;
-}
-#textarea{
-    padding: 0.5% 1%;
-    height: 60%;
-    width: 30%;
-    border: none;
-    border-radius: 15px;
-    background-color: whitesmoke;
-    color: #023047;
-    text-align: left;
-    font-size:1rem;
-    box-shadow: 1px 1px 2px rgb(92, 192, 179);
-    margin: 0 2%;
-}
-#textarea:hover{
-    box-shadow: 1px 2px 5px rgb(92, 192, 179);
-}
-#textarea::focus{
-    box-shadow: 1px 2px 5px rgb(92, 192, 179);
-}
-::placeholder{
-    padding: 0 2%;
-}
-.burger_menu{
-    display: none;
-    position: absolute;
-    right: 2rem;
-    height: 0;
-    top: 60px;
-    width: 30vw;
-    background-color: #D6F0E0;
-    backdrop-filter: blur(15px);
-    border-radius: 15px;
-    overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.burger_menu.open{
-    height: 200px;
-}
-.burger_menu li{
-    padding: 0.7rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.burger_menu #register{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
+  li {
+      list-style: none;
+  }
 
-/* Responsividade Header */
-@media (max-width: 992px) {
-    .navbar .links, 
-    .navbar #register{
-        display: none;
-    }
-    .navbar .burger_btn{
-        display: block;
-    }
-    .burger_menu{
-        display: block;
-    }
-    
-}
+  a:hover {
+      color: orangered;
+  }
+
+  header {
+      position: relative;
+      padding: 0 1.5rem;
+      background-color: #D6F0E0;
+  }
+
+  .navbar {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 50px;
+  }
+
+  .navbar .logo a {
+      color: orangered;
+      font-size: 1.5rem;
+      font-weight: bold;
+  }
+
+  .navbar .links {
+      display: flex;
+      gap: 0 1.5rem;
+      justify-content: end;
+  }
+
+  .navbar .burger_btn {
+      color: black;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: none;
+  }
+
+  #casa {
+      height: 1.2rem;
+      width: auto;
+      padding: 0 2px;
+      vertical-align: text-top;
+  }
+
+  #estrela {
+      height: 1.2rem;
+      width: auto;
+      padding: 0 1px;
+      vertical-align: text-top;
+  }
+
+  #salvar {
+      height: 1.2rem;
+      width: auto;
+      padding: 0 1px;
+      vertical-align: text-top;
+  }
+
+  #register {
+      background-color: orangered;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      color: whitesmoke;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: scale 0.2 ease;
+  }
+
+  #register:hover {
+      scale: 1.05;
+      color: #023047;
+  }
+
+  #register:active {
+      scale: 0.95;
+  }
+
+  #textarea {
+      padding: 0.5% 1%;
+      height: 60%;
+      width: 30%;
+      border: none;
+      border-radius: 15px;
+      background-color: whitesmoke;
+      color: #023047;
+      text-align: left;
+      font-size: 1rem;
+      box-shadow: 1px 1px 2px rgb(92, 192, 179);
+      margin: 0 2%;
+  }
+
+  #textarea:hover {
+      box-shadow: 1px 2px 5px rgb(92, 192, 179);
+  }
+
+  #textarea::focus {
+      box-shadow: 1px 2px 5px rgb(92, 192, 179);
+  }
+
+  ::placeholder {
+      padding: 0 2%;
+  }
+
+  .burger_menu {
+      display: none;
+      position: absolute;
+      right: 2rem;
+      height: 0;
+      top: 60px;
+      width: 30vw;
+      background-color: #D6F0E0;
+      backdrop-filter: blur(15px);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .burger_menu.open {
+      height: 200px;
+  }
+
+  .burger_menu li {
+      padding: 0.7rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .burger_menu #register {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
+
+  /* Responsividade Header */
+  @media (max-width: 992px) {
+
+      .navbar .links,
+      .navbar #register {
+          display: none;
+      }
+
+      .navbar .burger_btn {
+          display: block;
+      }
+
+      .burger_menu {
+          display: block;
+      }
+
+  }
 
 
-@media (max-width: 480px) {
-    .burger_menu {
-        width: 50vw;
-    }
-    #textarea{
-        display: none;
-    }
-}
+  @media (max-width: 480px) {
+      .burger_menu {
+          width: 50vw;
+      }
 
-
+      #textarea {
+          display: none;
+      }
+  }
