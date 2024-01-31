@@ -20,7 +20,7 @@
       color: orangered;
   }
 
-  a {
+  header a {
       font-size: 1.2rem;
       color: #023047;
       text-decoration: none;
@@ -32,7 +32,7 @@
       list-style: none;
   }
 
-  a:hover {
+  header a:hover {
       color: orangered;
   }
 
@@ -60,7 +60,6 @@
   .navbar .links {
       display: flex;
       gap: 0 1.5rem;
-      justify-content: end;
   }
 
   .navbar .burger_btn {
@@ -184,6 +183,10 @@
           display: block;
       }
 
+      #textarea {
+        width: 50vw;
+    }      
+
   }
 
 
@@ -191,8 +194,11 @@
       .burger_menu {
           width: 50vw;
       }
-
-      #textarea {
-          display: none;
-      }
   }
+  /* fim header style */
+
+  .container{
+    position: relative;
+    display: block;
+    text-align: center;
+}

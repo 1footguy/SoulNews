@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -12,26 +12,7 @@
 </head>
 
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logo"><a href="/home">Soul News</a></div>
-
-            <input type="text" id="textarea" placeholder="Pesquisar">
-            <ul class="links">
-                <li><a href="/home"> <img id="casa" src="/casa.png"> Pagina Inicial</a>
-                <li> <a href="/favoritos"> <img id="estrela" src="/estrela.png"> Favoritos</a>
-                <li><a href="/lista-leitura"> <img id="salvar" src="/salvar.png"> Salvos</a>
-            </ul>
-            <a id="register" href="#"> Registro</a>
-            <div class="burger_btn"><i class="fa fa-bars" aria-hidden="true"></i></div>
-        </div>
-        <div class="burger_menu">
-            <li><a href="/home">  Inicio</a>
-                <li> <a href="/favoritos"> Favoritos</a>
-                <li><a href="/lista-leitura"> Salvos</a>
-            <li><a id="register" href="#"> Registro</a></li>
-        </div>
-    </header>
+    <div th:replace="/fragmentos :: cabecalho"></div>
     <main></main>
     <footer></footer>
     <script src="/js/main.js"></script>

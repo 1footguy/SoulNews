@@ -8,6 +8,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 
 @Table(name = "usuarios")
 @Entity
@@ -16,11 +18,17 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idUsuario;
 
-    @Column(nullable = false, length = 60)
+    @Column( length = 60)
+    @NotEmpty
     private String nome;
 
-    @Column(nullable = false, length = 150, unique = true)
+    @Column(length = 150, unique = true)
+    @NotBlank
     private String email;
+
+    @Column(nullable = false, length = 20, unique = true)
+    @NotBlank
+    private String usuario;
     
     @Column(nullable = false, length = 10)
     private LocalDate dataNascimento;

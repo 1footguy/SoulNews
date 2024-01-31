@@ -9,36 +9,24 @@
     <link rel="stylesheet" href="..css/loginstyle.css">
 </head>
 <body>
-    <main>
-        <header>
-            <div class="navbar">
-                <a href="/home"><img src="#" alt="logo"></a> 
-                <div class="links">
-                    <a href="/home">Voltar</a>
-                    <a href="/favoritos">Favoritos</a>
-                    <a href="/lista-leitura">Lista de Leitura</a>
-                </div>       
-            </div>
-        </header>     
-        <div class="container">
-            <div class="login">
-                <label for="usuario"> Usuário:</label>
-                <input type="text" id="usuario" placeholder="Digite seu usuário">
-            </div>  
-            <div class="senha">
-                <label for="senha"> Senha (8 caracteres mín..):</label>
-                <input type="password" id="senha" minlength="8" maxlength="14" required placeholder="Digite sua senha">
-            </div> 
-            <section name="button">
-                <button type="submit">Login </button>
-                <button type="submit">Cadastre-se</button>
-            </section> 
-        </div>
-    <footer>
-        <label for="email">Se inscreva para receber e-mails com novidades e promoções.</label>
-        <input type= "email" id="email" placeholder="Endereço de e-mail">
-        <input type="submit" value="Enviar">
-    </footer>
-    </main>
-</body>
-</html>
+    <div th:replace="/fragmentos::cabecalho"></div>
+<h2> Novo Usuário</h2>
+<form action="usuario/create" method="post">
+  <fieldset>
+    <legend align="left">Cadastrar</legend>
+
+    <label for="nome">Nome <span style="color: red">*</span></label>
+    <input type="text" name="nome" id="nome" maxlength="100" required/>
+
+    <label for="telefone">Telefone <span style="color: red">*</span></label>
+    <input type="tel" name="telefone" id="telefone" maxlength="42" required/>
+    
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" maxlength="120">
+
+    <p>Campos preenchidos com <span style="color: red">*</span> são obrigatórios. </p>
+    <br />
+
+    <button type="submit">Enviar</button>
+  </fieldset>
+</form>
