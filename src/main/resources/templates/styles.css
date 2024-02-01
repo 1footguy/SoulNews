@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Shantell+Sans:ital,wght@1,300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@200;300;400;500;600&family=Roboto:wght@300;400;500;700&display=swap');
 * {
   box-sizing: border-box;
   padding: 0;
@@ -30,7 +29,6 @@ header {
   position: relative;
   padding: 0 1.5rem;
   background-color: var(--background-menus);
-  height: 65px;
 }
 
 .navbar {
@@ -38,6 +36,7 @@ header {
   display: flex;
   align-items: center;
   width: 100%;
+  height: 60px;
   font-family: Poppins;
   font-size: 1.2rem;
 }
@@ -65,11 +64,11 @@ li{
 }
 
 #estrela,
-#salvar, #casa {
+#salvar {
   height: 1.6rem;
   width: auto;
   padding: 0 1px;
-  vertical-align: sub;
+  vertical-align: top;
 }
 .icons img{
   margin: 0.2rem;
@@ -91,25 +90,32 @@ li{
 .burger_menu {
   display: none;
   position: absolute;
-  right: 0;
+  right: 2rem;
   height: 0;
   top: 60px;
-  width: 22vw;
-  background-color: #d8d8d8;
+  width: 30vw;
+  background-color: #D6F0E0;
   backdrop-filter: blur(15px);
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .burger_menu.open {
   height: 220px;
-  padding: 3%;
 }
 
 .burger_menu li {
-  display:inline-block;
-  margin-bottom: 15px;
+  padding: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger_menu #register {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /* formulario */
@@ -238,16 +244,14 @@ a {
   padding: 2vw;
 }
 
-
 .footer_container {
   background-color: var(--background-menus);
-  width: 100%;
-  height: 200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 6vh 0;
-  padding: 2vh 6vw;
+  align-items: center;
+  margin-top: 6vw;
+  padding: 2vw 6vw;
 }
 
 .perguntas_frequentes_container {
@@ -264,26 +268,26 @@ a {
   font-size: 1.6vw;
   border-radius: 2.5vw;
   width: 100%;
-  padding: 1vw;
-  margin-top: 6vh;
+  padding: 1.5vw;
+  margin-top: 5vw;
 }
 
 .contatos_container h1 {
   color: var(--color-title-primary);
-  font-family: Poppins;
-  font-size: 1.8rem;
+  font-family: Roboto;
+  font-size: 3vw;
 }
 
-.contatos_container li {
+.contatos_container div {
   display: flex;
   font-family: Poppins;
-  font-size: 1rem;
-  margin-top: 1.3vw;
+  font-size: 2vw;
+  gap: 1vw;
+  margin-top: 2vw;
 }
 
 .contatos_container img {
-  width: 1.8vw;
-  margin: 0 1%;
+  width: 3vw;
 }
 
 .contatos_container span {
@@ -291,7 +295,7 @@ a {
 }
 
 #logo {
-  width: 19vw;
+  width: 18vw;
 }
 
 
@@ -307,13 +311,8 @@ a {
     display: block;
   }
 
-  .burger_menu{
+  .burger_menu {
     display: block;
-  }
-
-  .burger_menu .icons{
-    text-align: center;
-    margin-top: 15px;
   }
 
   #logo {

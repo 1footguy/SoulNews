@@ -22,27 +22,21 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "usuarios")
-public class Usuario {
+@Table(name = "noticias")
+public class Noticia {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idUsuario;
+	private Integer idNoticia;
 
-	@Column(nullable = false, length = 100)
-	private String nome;
+	@Column(nullable = false, length = 255, unique = true)
+	private String titulo;
 
-	@Column(nullable = false, length = 180, unique = true)
-	private String email;
-
-	@Column(nullable = false)
+	@Column(length = 4000)
+	private String conteudo;
+	
 	@Temporal(TemporalType.DATE)
-	private LocalDate dataNascimento;
-
-	@Column(nullable = false, length = 20)
-	private String telefone;
-
-	@Column(nullable = false, length = 11, unique = true)
-	private String cpf;
+	@Column(nullable = false)
+	private LocalDate dataPublicacao;
 
 }
