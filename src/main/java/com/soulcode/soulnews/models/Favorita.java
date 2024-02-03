@@ -1,10 +1,15 @@
 package com.soulcode.soulnews.models;
 
-import jakarta.persistence.EmbeddedId;
+import java.time.LocalDate;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.MapsId;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -17,18 +22,23 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class NoticiaDepois {
+@Table(name = "favoritas")
+public class Favorita {
 
-	@EmbeddedId
-	private NoticiaDepoisId noticiaDepoisId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_favoritas")
+	private Integer idFavorita;
 
 	@ManyToOne
-	@MapsId("fkUsuario")
 	@JoinColumn(name = "fk_usuario")
 	private Usuario usuario;
 
 	@ManyToOne
-	@MapsId("fkNoticia")
 	@JoinColumn(name = "fk_noticia")
-	private Noticia noticiasDep;
+	private Noticia noticiasFav;
+	
+	@Column(name = "data_adicao")
+    private LocalDate dataAdicao;
+
 }

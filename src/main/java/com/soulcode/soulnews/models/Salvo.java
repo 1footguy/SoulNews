@@ -1,10 +1,14 @@
 package com.soulcode.soulnews.models;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -18,14 +22,22 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "temas")
-public class Tema {
+@Table(name = "salvos")
+public class Salvo {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idTemas;
+	@Column(name = "id_salvo")
+	private Integer idSalvo;
 
-	@Column(nullable = false, length = 100)
-	private String nomeTema;
+	@ManyToOne
+	@JoinColumn(name = "fk_usuario_salvo")
+	private Usuario usuario;
 
+	@ManyToOne
+	@JoinColumn(name = "fk_noticia_salvo")
+	private Noticia noticiasSalvo;
+	
+	@Column(name = "data_adicao")
+    private LocalDate dataAdicao;
 }
