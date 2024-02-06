@@ -27,20 +27,16 @@
 						<p th:text="'- ' + ${noticia.fonte}"></p>
 						<span th:text="${#temporals.format(noticia.dataPublicacao)}"></span>
 					</section>
-					<section class="salvar_favoritar_icones_container">
-						<form action="/favoritas" method="get"> 
-							<input type="hidden" name="idNoticia" th:value="${noticia.idNoticia}" />
-							<button type="submit" style="background-color: transparent; padding: 0; margin: 0;">
-								<img id="favorita" src= "/img/icones/star.svg" alt="icone Favoritar" />
-							</button>
-						</form>
-						<form action="/salvos" method="get">
-							<input type="hidden" name="idNoticia" th:value="${noticia.idNoticia}" />
-							<button type="submit" style="background-color: transparent; padding: 0; margin: 0;">
-								<img id="icones" src="/img/icones/save.svg" alt="icone Salvar" />
-							</button>
-						</form>
-					</section>
+					<div class="button_container">
+                        <form th:action="'/noticias/'+${noticia.idNoticia}+'/edit'" method="get">
+                            <input type="hidden" name="id" th:value="${noticia.idNoticia}" />
+                            <button id="edit" type="submit" class="">Editar</button>
+                        </form>
+                        <form action="/noticias/delete" method="post">
+                            <input type="hidden" name="id" th:value="${noticia.idNoticia}" />
+                            <button id="delete" type="submit" class="">Excluir</button>
+                        </form>
+                    </div>
 				</div>
 			</section>
 			<div th:replace="~{/fragmentos::footer}"></div>

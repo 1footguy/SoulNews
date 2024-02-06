@@ -21,6 +21,11 @@ public class UsuarioController {
 	private UsuarioRepository usuarioRepository;
 
 	// CREATE
+	@GetMapping("/cadastro")
+	public ModelAndView paginaCadastro(){
+		ModelAndView mv = new ModelAndView("cadastro");
+		return mv;
+	}
 	@PostMapping("/usuarios/create")
 	public String createUsuario(Usuario usuario) {
 		try {
@@ -44,7 +49,7 @@ public class UsuarioController {
 	}
 
 	// Update
-	@PostMapping("/usuarios/update")
+	@PostMapping("/update")
 	public String updateUsuario(Usuario usuario) {
 		try {
 			Optional<Usuario> usuarioOpt = usuarioRepository.findById(usuario.getIdUsuario());

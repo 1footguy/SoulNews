@@ -1,7 +1,5 @@
 package com.soulcode.soulnews.models;
 
-import java.time.LocalDate;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -38,6 +36,5 @@ public class Salvo {
 	@JoinColumn(name = "fk_noticia_salvo")
 	private Noticia noticiasSalvo;
 	
-	@Column(name = "data_adicao")
-    private LocalDate dataAdicao;
+	
 }

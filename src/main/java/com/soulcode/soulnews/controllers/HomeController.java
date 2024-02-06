@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.soulcode.soulnews.models.Noticia;
 import com.soulcode.soulnews.repositories.NoticiaRepository;
 
+
 @Controller
 public class HomeController {
 	@Autowired
@@ -22,4 +23,42 @@ public class HomeController {
 		mv.addObject("listaNoticias", noticias);
 		return mv;
 	}
+
+	@GetMapping("/criar-noticia")
+    public String paginaCriarNoticia() {
+        return "criar-noticia";
+    }
+
+	@GetMapping("/enviar-mensagem")
+    public String paginaEnviarMensagem() {
+        return "enviar-mensagem";
+    }
+
+	@GetMapping("/perguntas-frequentes")
+    public String paginaPerguntasFrequentes() {
+        return "perguntas-frequentes";
+    }
+
+	@GetMapping("/erro")
+    public String paginaDeErro() {
+        
+		return "erro";
+    }
+
+	@GetMapping("/noticia-pesquisa")
+    public String paginaNoticiaPesquisa() {
+        return "noticia-pesquisa"; 
+    }
+
+	@GetMapping("/pesquisa-avancada")
+    public String paginaPesquisaAvancada() {
+        return "pesquisa-avancada"; 
+    }
+
+    @GetMapping("/grcmt")
+    public ModelAndView paginaGrcmt() {
+        ModelAndView mv = new ModelAndView("grcmt");
+        return mv;
+    }
+    
 }

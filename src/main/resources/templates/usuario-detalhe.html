@@ -9,15 +9,18 @@
 </head>
 
 <body>
-	<main>
-		<a href="/usuarios">&#9666; Voltar</a>
+    <div class="wrapper">
+        <div th:replace="~{/fragmentos::cabecalho}"></div>
+	<main class="container_tela_principal">
 		<h1 th:text="${usuario.nome}"></h1>
 		<p th:text="'Email: '+${usuario.email}"></p>
 		<p>Data de Nascimento: <span th:text="${usuario.dataNascimento}"></span></p>
 		<p>Telefone: <span th:text="${usuario.telefone}"></span></p>
 		<p>CPF: <span th:text="${usuario.cpf}"></span></p>
 	</main>
-	<script src="/js/main.js"></script>
+	<div th:replace="~{/fragmentos::rodape}"></div>
+</div>
+<script src="/js/main.js"></script>
 </body>
 
 </html>

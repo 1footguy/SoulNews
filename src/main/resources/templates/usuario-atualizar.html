@@ -9,26 +9,42 @@
 </head>
 
 <body>
-	<main>
-		<a href="/noticias">&#9666; Voltar</a>
-		<h1>Editar Noticia</h1>
-		<hr />
-		<form action="/noticias/update" method="post">
-			<input type="hidden" name="idNoticia" th:value="${noticia.idNoticia}" />
+	<div class="wrapper">
+		<div th:replace="~{/fragmentos::cabecalho}"></div>
+		<main class="container_tela_principal">
+			<section class="container_form">
+				<h1>Novo usuário</h1>
+				<form class="form" action="/update" method="post">
+					<input type="hidden" name="idUsuario" th:value="${usuario.idUsuario}" />
 
-			<label for="titulo">Titulo<span style="color: red">*</span></label>
-			<input th:value="${noticia.titulo}" type="text" name="titulo" id="titulo" maxlength="100" required />
+					<label for="nome">Nome:<span style="color: red">*</span></label>
+					<input th:value="${usuario.nome}" type="text" name="nome" id="nome" maxlength="100" required
+						placeholder="Digite seu nome completo" />
 
-			<label for="conteudo">Conteudo</label>
-			<input th:value="${noticia.conteudo}" type="conteudo" name="conteudo" id="conteudo" maxlength="120" />
+					<label for="email">Email:<span style="color: red">*</span></label>
+					<input th:value="${usuario.email}" type="email" name="email" id="email" maxlength="180" required
+						placeholder="Digite seu email completo">
 
-			<label for="conteudo">Data Publicação</label>
-			<input th:value="${noticia.dataPublicacao}" type="date" name="dataPublicacao" id="dataPublicacao"
-				maxlength="120" />
+					<label for="dataNascimento">Data de Nascimento:<span style="color: red">*</span></label>
+					<input th:value="${usuario.dataNascimento}" type="date" name="dataNascimento" id="dataNascimento"
+						required />
 
-			<button type="submit">Enviar</button>
-		</form>
-	</main>
+					<label for="telefone">Telefone:<span style="color: red">*</span></label>
+					<input th:value="${usuario.telefone}" type="tel" name="telefone" id="telefone" maxlength="20"
+						required placeholder="Numero para contato" />
+
+					<label for="cpf">CPF:<span style="color: red">*</span></label>
+					<input th:value="${usuario.cpf}" type="text" name="cpf" id="cpf" maxlength="11" required
+						placeholder="Digite seu CPF" />
+
+
+					<p>Campos preenchidos com <span style="color: red">*</span> são obrigatórios. </p>
+					<button id="Enviar" type="submit">Enviar</button>
+				</form>
+			</section>
+		</main>
+		<div th:replace="~{/fragmentos::rodape}"></div>
+	</div>
 	<script src="/js/main.js"></script>
 </body>
 
